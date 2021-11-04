@@ -12,10 +12,24 @@ class Map():
         x, y, direction, length, index = blk.start_point_x, blk.start_point_y, blk.direction, blk.length, blk.indx
         if direction == 'horizontal':
             for i in range(length):
-                self.map[x][y+i] = index
+                self.map[y][x+i] = index
         if direction == 'vertical':
             for i in range(length):
-                self.map[x+i][y] = index
+                self.map[y+i][x] = index
+    
+    def delete_block(self, blk):
+        x, y, direction, length = blk.start_point_x, blk.start_point_y, blk.direction, blk.length
+        if direction == 'horizontal':
+            for i in range(length):
+                self.map[y][x+i] = 0
+        if direction == 'vertical':
+            for i in range(length):
+                self.map[y+i][x] = 0
+
+    def move_block(self, blk, step, direct):
+        Map.delete_block(self, blk)
+        blk.move(step, direct)
+        Map.add_block(self, blk)
 
 
 
@@ -42,9 +56,11 @@ class Block():
         if self.direction == 'vertical':
             self.start_point_y += step*direct
 
-
-a = Block(1, 1, 'horizontal', 3, 1)
+''' Test unit (xoá note để test)
+a = Block(1, 1, 'vertical', 3, 1)
 b = Map()
 b.add_block(a)
+print(b, '\n')
+b.move_block(a, 2, 1)
 print(b)
-a.move(1, 1)
+'''
