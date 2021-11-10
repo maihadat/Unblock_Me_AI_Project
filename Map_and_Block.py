@@ -1,7 +1,7 @@
-
 import numpy as np
 
-class Map():
+
+class Map:
     def __init__(self):
         self.map = np.array([[0 for i in range(6)] for i in range(6)])
 
@@ -9,22 +9,33 @@ class Map():
         return str(self.map)
 
     def add_block(self, blk):
-        x, y, direction, length, index = blk.start_point_x, blk.start_point_y, blk.direction, blk.length, blk.indx
-        if direction == 'horizontal':
+        x, y, direction, length, index = (
+            blk.start_point_x,
+            blk.start_point_y,
+            blk.direction,
+            blk.length,
+            blk.indx,
+        )
+        if direction == "horizontal":
             for i in range(length):
-                self.map[y][x+i] = index
-        if direction == 'vertical':
+                self.map[y][x + i] = index
+        if direction == "vertical":
             for i in range(length):
-                self.map[y+i][x] = index
-    
+                self.map[y + i][x] = index
+
     def delete_block(self, blk):
-        x, y, direction, length = blk.start_point_x, blk.start_point_y, blk.direction, blk.length
-        if direction == 'horizontal':
+        x, y, direction, length = (
+            blk.start_point_x,
+            blk.start_point_y,
+            blk.direction,
+            blk.length,
+        )
+        if direction == "horizontal":
             for i in range(length):
-                self.map[y][x+i] = 0
-        if direction == 'vertical':
+                self.map[y][x + i] = 0
+        if direction == "vertical":
             for i in range(length):
-                self.map[y+i][x] = 0
+                self.map[y + i][x] = 0
 
     def move_block(self, blk, step, direct):
         Map.delete_block(self, blk)
@@ -32,29 +43,29 @@ class Map():
         Map.add_block(self, blk)
 
 
+class Block:
+    """
+    x range from 0 to 5
+    y range from 0 to 5
+    """
 
-class Block():
-   '''
-   x range from 0 to 5
-   y range from 0 to 5
-   '''
-   def __init__(self, x, y, direction, length, index):
+    def __init__(self, x, y, direction, length, index):
         self.start_point_x = x
         self.start_point_y = y
         self.direction = direction
         self.length = length
         self.indx = index
 
-   def move(self, step, direct):
+    def move(self, step, direct):
         """
         :param step: int
         :param direct: -1/+1
         :return: new block
         """
-        if self.direction == 'horizontal':
-            self.start_point_x += step*direct
-        if self.direction == 'vertical':
-            self.start_point_y += step*direct
+        if self.direction == "horizontal":
+            self.start_point_x += step * direct
+        if self.direction == "vertical":
+            self.start_point_y += step * direct
 
 ''' Test unit (xoá note để test)
 a = Block(1, 1, 'vertical', 3, 1)
