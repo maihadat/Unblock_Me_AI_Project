@@ -66,12 +66,3 @@ class Block:
             self.start_point_x += step * direct
         if self.direction == "vertical":
             self.start_point_y += step * direct
-
-''' Test unit (xoá note để test)
-a = Block(1, 1, 'vertical', 3, 1)
-b = Map()
-b.add_block(a)
-print(b, '\n')
-b.move_block(a, 2, 1)
-print(b)
-'''
