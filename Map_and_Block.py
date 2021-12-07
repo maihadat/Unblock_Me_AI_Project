@@ -94,7 +94,7 @@ class Map:
     
     def All_Moves(self):
         All_Moves_list = []
-        for blk in Block.All_Blocks:
+        for blk in self.blocks:
             All_Moves_list += Map.possible_move(self,blk)
         return All_Moves_list
 
