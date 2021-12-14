@@ -1,0 +1,10 @@
+Files from 1 to 40: solvable maps
+Files from 41 to 50: unsolvable
+
+user input: inp(x).txt
+
+image: map(x).png
+
+heuristic: goal(x).txt
+
+heuristic image: goalmap(x).txt
