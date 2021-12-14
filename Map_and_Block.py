@@ -126,3 +126,32 @@ class Block:
             self.start_point_x += step * direct
         if self.direction == "vertical":
             self.start_point_y += step * direct
+
+
+'''
+   Khi gõ các thông tin của map lên file txt thì cần theo một số quy chuần:
+       + Các cột theo thứ tự từ trái qua phải lần lượt là start_x, start_y, kí tự đầu của direc, length
+       + Khi điền block cuối(cũng là block đỏ) thì ko đc enter xuống dòng
+    Tôi có để file test_map.txt làm mẫu để mọi người điền cho ko bị lỗi
+'''
+def read_input(file_name):
+    m = Map()
+    with open(file_name) as f:
+        list_of_blocks = f.readlines()[:]
+        number_of_blocks = len(list_of_blocks)
+        for i in range(number_of_blocks):
+            if i == number_of_blocks-1:
+                block = list_of_blocks[i].strip()
+            else:
+                block = list_of_blocks[i][:-1].strip()
+            x = int(block[0])
+            y = int(block[2])
+            if block[4] == 'h':
+                direc = 'horizontal'
+            elif block[4] == 'v':
+                direc = 'vertical'
+            length = int(block[-1])
+            blk = Block(x, y, direc, length)
+            m.add_block(blk)
+    return m
+
