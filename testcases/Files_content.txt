@@ -2,9 +2,11 @@ Files from 1 to 7: unsolvable
 
 Files from 8 to 10: already solved maps, just to test if we can return solution straight away
 
-Files from 11 to 50: solvable maps
- 11->30 beginner level
- 31->40 slightly harder, but still easy
+Files from 11 to 45: solvable maps
+ 11->30 beginner level (1->5 moves)
+ 31->40 slightly harder, but still easy (more moves, but people can see the solution by "brain-traversal")
+ 41->45 hard, may need more than 15 moves
+ 
 
 
 user input: inp(x).txt
