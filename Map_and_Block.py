@@ -134,7 +134,7 @@ class Block:
        + Khi điền block cuối(cũng là block đỏ) thì ko đc enter xuống dòng
     Tôi có để file test_map.txt làm mẫu để mọi người điền cho ko bị lỗi
 '''
-def read_input(file_name):
+def read_input(file_name): # read a text file and return an instance of Map class
     m = Map()
     with open(file_name) as f:
         list_of_blocks = f.readlines()[:]
