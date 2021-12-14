@@ -1,9 +1,15 @@
-Files from 1 to 40: solvable maps
-Files from 41 to 50: unsolvable
+Files from 1 to 7: unsolvable
+
+Files from 8 to 10: already solved maps, just to test if we can return solution straight away
+
+Files from 11 to 50: solvable maps
+ 11->30 beginner level
+ 31->40 slightly harder, but still easy
+
 
 user input: inp(x).txt
 
-image: map(x).png
+image: map(x).PNG
 
 heuristic: goal(x).txt
 
