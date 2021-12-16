@@ -1,5 +1,5 @@
 import numpy as np
-import Customized_Customized_Map_and_Block
+import Customized_Map_and_Block
 import copy
 import sys 
 
