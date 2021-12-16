@@ -1,0 +1,1 @@
+- Chạy generator thì copy code vào Jupyter notebook thành các cell theo thứ tự ExportTypeMap -> ExportNumBlock -> ExportMap. Rồi chạy lần lượt
