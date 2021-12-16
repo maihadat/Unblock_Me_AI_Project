@@ -2,12 +2,6 @@ import numpy as np
 import Customized_Map_and_Block
 import copy
 import sys 
-test = np.array([[0, 0, 0, 4, 5, 0],
-                 [0, 0, 1, 4, 5, 0],
-                 [8, 8, 1, 4, 5, 0],
-                 [0, 0, 6, 6, 0, 0],
-                 [0, 3, 2, 0, 0, 0],
-                 [0, 3, 2, 7, 7, 0]])
 
 a = Map_and_Block.Block(5, 0, 'vertical', 2, 1)
 b = Map_and_Block.Block(4, 0, 'vertical', 2, 2)
