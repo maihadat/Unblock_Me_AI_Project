@@ -3,22 +3,22 @@ import Customized_Map_and_Block
 import copy
 import sys 
 
-a = Map_and_Block.Block(5, 0, 'vertical', 2, 1)
-b = Map_and_Block.Block(4, 0, 'vertical', 2, 2)
-c = Map_and_Block.Block(4, 2, 'vertical', 2, 3)
-d = Map_and_Block.Block(3, 2, 'vertical', 2, 4)
-e = Map_and_Block.Block(2, 2, 'vertical', 2, 5)
-f = Map_and_Block.Block(3, 4, 'vertical', 2, 6)
-g = Map_and_Block.Block(0, 0, 'vertical', 2, 7)
+a = Customized_Map_and_Block.Block(5, 0, 'vertical', 2, 1)
+b = Customized_Map_and_Block.Block(4, 0, 'vertical', 2, 2)
+c = Customized_Map_and_Block.Block(4, 2, 'vertical', 2, 3)
+d = Customized_Map_and_Block.Block(3, 2, 'vertical', 2, 4)
+e = Customized_Map_and_Block.Block(2, 2, 'vertical', 2, 5)
+f = Customized_Map_and_Block.Block(3, 4, 'vertical', 2, 6)
+g = Customized_Map_and_Block.Block(0, 0, 'vertical', 2, 7)
 
-h = Map_and_Block.Block(1, 1, 'horizontal', 3, 8)
+h = Customized_Map_and_Block.Block(1, 1, 'horizontal', 3, 8)
 
-i = Map_and_Block.Block(4, 4, 'horizontal', 2, 9)
-k = Map_and_Block.Block(0, 3, 'horizontal', 2, 10)
+i = Customized_Map_and_Block.Block(4, 4, 'horizontal', 2, 9)
+k = Customized_Map_and_Block.Block(0, 3, 'horizontal', 2, 10)
 
-X = Map_and_Block.Block(0, 2, 'horizontal', 2, 11)
+X = Customized_Map_and_Block.Block(0, 2, 'horizontal', 2, 11)
 
-InitState = Map_and_Block.State([a, b, c, d, e, f, g, h, i, k, X])
+InitState = Customized_Map_and_Block.State([a, b, c, d, e, f, g, h, i, k, X])
 
 def Goal_state(node):
     start = node.AllBlocks[2].start_point_x

@@ -2,21 +2,6 @@ import Map_and_Block
 import copy
 import time
 
-a = Map_and_Block.Block(2, 1, 'vertical', 2)
-b = Map_and_Block.Block(2, 3, 'vertical', 2)
-c = Map_and_Block.Block(1, 4, 'vertical', 2)
-d = Map_and_Block.Block(3, 1, 'vertical', 3)
-e = Map_and_Block.Block(4, 1, 'vertical', 3)
-f = Map_and_Block.Block(0, 3, 'horizontal', 2)
-g = Map_and_Block.Block(2, 5, 'horizontal', 2)
-X = Map_and_Block.Block(0, 2, 'horizontal', 2)
-
-m = Map_and_Block.Map()
-
-for blk in m.blocks:
-    Map_and_Block.Map.add_block(m, blk)
-
-print(m,'\n')
 
 # start = time.time()
 def goal_state(board, blk):
