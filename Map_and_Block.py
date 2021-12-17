@@ -144,6 +144,7 @@ class State():
 
 def read_input(file_name): # read a text file and return an instance of Map class
     m = Map()
+    AllBlocks = []
     with open(file_name) as f:
         list_of_blocks = f.readlines()[:]
         number_of_blocks = len(list_of_blocks)
@@ -157,8 +158,9 @@ def read_input(file_name): # read a text file and return an instance of Map clas
             direc = block[4]
             length = int(block[-1])
             blk = Block(x, y, direc, length)
+            AllBlocks.append(blk)
             m.add_block(blk)
-    return m
+    return m, AllBlocks
 
 
 #test unit, remove ''' ''' to test
