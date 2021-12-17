@@ -1,7 +1,6 @@
 import numpy as np
 import Customized_Map_and_Block
 import copy
-import sys 
 
 a = Customized_Map_and_Block.Block(5, 0, 'vertical', 2, 1)
 b = Customized_Map_and_Block.Block(4, 0, 'vertical', 2, 2)
@@ -43,25 +42,26 @@ def Trace():
         path.append(CurrPos)
         CurrPos = AdjacentStates[CurrPos]
         
-def BFS(root):
+def BFS(root, GoalCheck):
     Queue = SuccGen(root)
     while len(Queue) != 0:
         CurrNode = Queue.pop(0)
-        if Goal_state(CurrNode):
+        if GoalCheck(CurrNode):
             return CurrNode.GameMap.__str__()
         else:
             for ChildNode in SuccGen(CurrNode):
                 Queue.append(ChildNode)
     return 'Failure'
 
-AdjacentStates = dict()
-count = 0
-path = []
-FinishNode = BFS(InitState)
-Trace()
-print('Number of steps: %d' %(len(path)))
+if __name__ == '__main__':
+    AdjacentStates = dict()
+    count = 0
+    path = []
+    FinishNode = BFS(InitState, Goal_state)
+    Trace()
+    print('Number of steps: %d' %(len(path)))
 
-for i in range(len(path) -1, -1, -1):
-    print('Step %d' % (len(path) - i))
-    print(path[i])
-    print()
+    for i in range(len(path) -1, -1, -1):
+        print('Step %d' % (len(path) - i))
+        print(path[i])
+        print()
