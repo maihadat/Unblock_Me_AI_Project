@@ -18,6 +18,9 @@ def SuccGen(CurrState, PriQueue):
             PriQueue.Enqueue(NextState)
     
 def Heuristics1(State):
+    '''
+    In this heuristics, the simple idea is that using player' experience to play it. To be detail, all vertical blocks of length = 2 will be local 
+    '''
     count = 0
     for block in State.AllBlocks:
         if block.length == 3:
@@ -98,19 +101,16 @@ print(FinishNode.GameMap)
 
 
 
-''' Get Finish State:
-Tag = 
+''' 
+# Get Finish State:
+Tag = ...  Type your input tag here
 ConvertToText(FinishNode.AllBlocks, 'A Star\inp%d_2.txt' % Tag)
-
-
-ConvertToText(FinishNode.AllBlocks, 'A Star\inp%d_2.txt' % Tag)
-
 ConvertToText(InitState.AllBlocks, 'inp%d.txt % Tag)
-
 '''
+
+# Main BFS section:
 path = []
 Trace()
-
 print('Number of steps: %d' %(len(path)))
 
 for i in range(len(path) -1, -1, -1):
