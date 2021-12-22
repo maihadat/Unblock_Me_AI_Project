@@ -28,7 +28,7 @@ def Goal_state(node):
 
 def SuccGen(CurrState, Queue): 
     for move in CurrState.GetNextMoves():
-        NextState = CurrState.NextState(move)
+        NextState = CurrState.NextStates(move)
         if NextState.GameMap.__str__() not in AdjacentStates:
             AdjacentStates[NextState.GameMap.__str__()] = CurrState.GameMap.__str__()
             Queue.append(NextState)    
