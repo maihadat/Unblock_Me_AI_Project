@@ -83,11 +83,11 @@ def ConvertToText(AllBlocks, Input):
 
 
 
-Tag = 1000
-_, All_Blocks = SpLib.read_input('A Star\Sample Test\inp%d.txt' % Tag)
-_, FinishAllBlocks = SpLib.read_input('A Star\Sample Test\inp%d_2.txt' % Tag)
+Tag = 44
+_, All_Blocks = SpLib.read_input('Sample Test\inp%d.txt' % Tag)
+_, FinishAllBlocks = SpLib.read_input('Sample Test\inp%d_2.txt' % Tag)
 
-InitState = SpLib.State(All_Blocks, 0, Heuristics2)
+InitState = SpLib.State(All_Blocks, 0, Heuristics1)
 print(InitState.GameMap)
 
 

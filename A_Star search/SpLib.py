@@ -248,7 +248,7 @@ def read_input(file_name): # read a text file and return an instance of Map clas
 
 if __name__ == '__main__':
     print(os.getcwd())
-    _, Test = read_input('A Star\inp1000_2.txt')
+    _, Test = read_input('Sample Test\inp1000_2.txt')
     InitState = State(Test)
     print(InitState.GameMap)
     
